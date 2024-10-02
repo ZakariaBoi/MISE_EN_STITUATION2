@@ -63,11 +63,11 @@ void updateStatus(){
                 default:
                   printf("Command Not Found");
             }
-            printf("+-----+----------------------+----------------------+----------------------+----------------------+\n");
-            printf("| ID  |         Nom          |      Descreption     |         Date         |         Status       |\n");
-            printf("+-----+----------------------+----------------------+----------------------+----------------------+\n");
-            printf("| %-3d | %-20s | %-20s | %02d/%02d/%04d | %-20s |\n", i, tasks[i].name, tasks[i].desc, tasks[i].date.day, tasks[i].date.month, tasks[i].date.year, tasks[i].status);
-            printf("+-----+----------------------+----------------------+----------------------+----------------------+\n");
+            printf("+-----+----------------------+----------------------+---------------+----------------------+\n");
+            printf("| ID  |         Nom          |      Descreption     |     Date      |         Status       |\n");
+            printf("+-----+----------------------+----------------------+---------------+----------------------+\n");
+            printf("| %-3d | %-20s | %-20s | %-2d/ %-2d / %-4d | %-20s |\n", i, tasks[i].name, tasks[i].desc, tasks[i].date.day, tasks[i].date.month, tasks[i].date.year, tasks[i].status);
+            printf("+-----+----------------------+----------------------+---------------+----------------------+\n");
             return;
         }
     }
@@ -111,9 +111,9 @@ int terminal() {
 }
 
 int main() {
-    tasks[0] = (struct Task){"Task1", "Description of Task 1", "To Do", {2024, 10, 2}};
-    tasks[1] = (struct Task){"Task2", "Description of Task 2", "Doing", {2024, 10, 3}};
-    tasks[2] = (struct Task){"Task3", "Description of Task 3", "Done", {2024, 10, 4}};
+    tasks[0] = (struct Task){"Task1", "Description 1", "To Do", {2024, 10, 2}};
+    tasks[1] = (struct Task){"Task2", "Description 2", "Doing", {2024, 10, 3}};
+    tasks[2] = (struct Task){"Task3", "Description 3", "Done", {2024, 10, 4}};
     
     terminal();
     return 0;
